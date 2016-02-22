@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnStartActivity"
+        android:background="@android:color/transparent"
+        android:divider="#d9d9d9"
+        android:dividerHeight="1px"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay" />
+
+    <Button
+        android:id="@+id/btnStartActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStartFragment"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/start_new_activity"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnStartFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/start_new_fragment"
+        android:textSize="20sp" />
+
+</RelativeLayout>
