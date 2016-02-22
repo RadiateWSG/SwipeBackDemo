@@ -34,7 +34,7 @@ public class Utils {
     }
 
     public static String getArticleUrl() {
-        return "http://www.jianshu.com/users/49f702945ced/";
+        return "https://github.com/RadiateWSG/SwipeBackDemo";
     }
 
 }
