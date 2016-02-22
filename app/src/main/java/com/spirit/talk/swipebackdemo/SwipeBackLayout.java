@@ -262,7 +262,7 @@ public class SwipeBackLayout extends FrameLayout {
     }
 
     private void computeScrollPercent() {
-        mScrollPercent = (float) Math.abs(getScrollX()) / (mViewWidth + mShadowLeft.getIntrinsicWidth());
+        mScrollPercent = (float) Math.abs(getScrollX()) / (mViewWidth/* + mShadowLeft.getIntrinsicWidth()*/);
 //        Log.e(TAG, "getScrollX()：" + getScrollX() + " , mScrollPercent：" + mScrollPercent);
     }
 
@@ -281,8 +281,9 @@ public class SwipeBackLayout extends FrameLayout {
      * 向右滚动
      */
     public void scrollRigth() {
+        isFinish = true;
         int delta = mViewWidth + getScrollX();//正直
-        mScroller.startScroll(getScrollX(), 0, -delta + 1, 0, Math.abs(delta));
+        mScroller.startScroll(getScrollX(), 0, -delta, 0, Math.abs(delta));
         postInvalidate();
     }
 
@@ -324,7 +325,8 @@ public class SwipeBackLayout extends FrameLayout {
 //        Log.d(TAG, childRect.left + " , " + childRect.top + " , " + childRect.bottom);
         mShadowLeft.setBounds(childRect.left - mShadowLeft.getIntrinsicWidth(), childRect.top,
                 childRect.left, childRect.bottom);
-        mShadowLeft.setAlpha((int) ((1 - mScrollPercent) * FULL_ALPHA));
+        float num = (1 - mScrollPercent)/* < 0.1 ? 0 : 1 - mScrollPercent*/;
+        mShadowLeft.setAlpha((int) (num * FULL_ALPHA));
         mShadowLeft.draw(canvas);
     }
 
