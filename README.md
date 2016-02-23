@@ -3,3 +3,7 @@
 - 本项目demo参考SwipeBackLayout：https://github.com/ikew0ng/SwipeBackLayout
 - 比SwipeBackLayout更简单、易懂，有完整的注释。
 
+
+### Screenshots
+
+<img src="screenshots/Screenshot_SwipeBackDemo2.png" width="25%" />
