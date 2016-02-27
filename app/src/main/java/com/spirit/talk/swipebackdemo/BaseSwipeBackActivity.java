@@ -20,10 +20,4 @@ public class BaseSwipeBackActivity extends FragmentActivity {
         swipeBackLayout.attachToActivity(this);
     }
 
-    @Override
-    public void onBackPressed() {
-        swipeBackLayout.scrollRigth();
-//        super.onBackPressed();
-//        overridePendingTransition(0, R.anim.slide_out_right);
-    }
 }

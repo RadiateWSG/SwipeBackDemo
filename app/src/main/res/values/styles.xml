@@ -4,6 +4,18 @@
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowIsTranslucent">true</item>
+        <!--<item name="android:windowAnimationStyle">@style/ActivityAnimStyle</item>-->
+        <!-- 设置android:windowIsTranslucent为true时，动画样式要继承自“Animation.Translucent” -->
+        <item name="android:windowAnimationStyle">@style/WindowAnimStyle</item>
     </style>
 
+    <style name="WindowAnimStyle" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="ActivityAnimStyle" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
 </resources>

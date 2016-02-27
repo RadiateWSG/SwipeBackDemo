@@ -35,12 +35,10 @@ public class MainActivity extends BaseSwipeBackActivity implements View.OnClickL
     public void onClick(View v) {
         if (v.getId() == R.id.btnStartActivity) {
             startActivity(new Intent(MainActivity.this, MainActivity.class));
-            overridePendingTransition(R.anim.slide_in_right, 0);
         } else if (v.getId() == R.id.btnStartFragment) {
             Intent intent = new Intent(MainActivity.this, FragmentContainerActivity.class);
             intent.putExtra("fragment", com.spirit.talk.swipebackdemo.MyFragment.class.getName());
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, 0);
         }
     }
 

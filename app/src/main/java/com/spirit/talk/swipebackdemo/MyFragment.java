@@ -43,12 +43,10 @@ public class MyFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if (v.getId() == R.id.btnStartActivity) {
             startActivity(new Intent(getActivity(), MainActivity.class));
-            getActivity().overridePendingTransition(R.anim.slide_in_right, 0);
         } else if (v.getId() == R.id.btnStartFragment) {
             Intent intent = new Intent(getActivity(), FragmentContainerActivity.class);
             intent.putExtra("fragment", com.spirit.talk.swipebackdemo.MyFragment.class.getName());
             startActivity(intent);
-            getActivity().overridePendingTransition(R.anim.slide_in_right, 0);
         }
     }
 
